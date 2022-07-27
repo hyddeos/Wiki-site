@@ -1,5 +1,5 @@
 # Wiki-site
-## CS50w | My solution for the Wiki project. 
+My solution for the Wiki project in the Harvard cs50w course. 
 
 Python, Django, Html & CSS
 
