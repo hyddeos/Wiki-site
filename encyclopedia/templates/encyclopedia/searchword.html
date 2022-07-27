@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Searched for: 
+{% endblock %}
+
+{% block body %}
+    <h1>You searched for: {{ q }} </h1>
+    <h4>We did´t find it but you might find it below</h4>
+    <br>
+    <h3>Search results:</h3>
+    <ol>
+    {% for wiki in results %}
+    <li><a href="{% url 'index' %}{{ wiki }}">{{ wiki }} </a></li>
+    {% endfor %}
+    </ol>
+{% endblock %}

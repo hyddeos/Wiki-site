@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create a New entry
+{% endblock %}
+
+{% block body %}
+    
+        <h1>Create a New entry</h1>
+        {% if error %}
+            <h2>There already exist a post with that name</h2>
+        {% endif %}
+        <form id="newform" method="post">
+            {{ form.as_p }}    
+            {% csrf_token %}
+            <input type="submit" class="btnbtn-primary" value="submit">
+        </form>
+{% endblock %}

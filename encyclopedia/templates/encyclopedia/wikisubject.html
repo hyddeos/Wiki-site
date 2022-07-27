@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ subjecttitel }}
+{% endblock %}
+
+{% block body %}
+    {% if subject == none %}
+        <h1>The requested page was not found</h1>
+        <p>better luck next time</p>
+    {% else %}
+       {{ subject | safe | escape }}
+       <br>
+       <hr>  
+       
+       <h4>Do you want change or add anything to this subject?</h4> 
+       <form action="editpage.html" method="GET">
+           <button name="edit" type="submit" value="{{ request.path }}">Edit page</button>
+       </form>
+    {% endif %}
+
+
+{% endblock %}
